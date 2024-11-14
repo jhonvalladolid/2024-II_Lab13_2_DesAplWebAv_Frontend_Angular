@@ -1,3 +1,8 @@
+/* Personalizar el margen superior para todo el contenedor */
+.container {
+  margin-top: 80px; /* Equivalente a style={{ marginTop: "80px" }} */
+}
+
 .card {
   border-radius: 8px;
   margin-top: 20px;
