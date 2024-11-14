@@ -1,1 +1,61 @@
-<p>home works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-3 mb-4">
+      <div class="card bg-light">
+        <div class="card-body">
+          <h5 class="card-title">{{ dashboardData.totalClientes }}</h5>
+          <p class="card-text text-muted">Total de Clientes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <h5 class="card-title">{{ dashboardData.totalProductos }}</h5>
+          <p class="card-text">Total de Productos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card bg-warning">
+        <div class="card-body">
+          <h5 class="card-title">{{ dashboardData.newClients }}</h5>
+          <p class="card-text text-muted">Nuevos Usuarios</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card bg-danger text-white">
+        <div class="card-body">
+          <h5 class="card-title">{{ dashboardData.newProduct }}</h5>
+          <p class="card-text">Visitantes Únicos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Ventas</h6>
+          <div style="height: 300px;">
+            <!-- Aquí puedes agregar una gráfica de ventas usando Chart.js o cualquier librería de gráficos -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Visitantes</h6>
+          <div style="height: 300px;">
+            <!-- Aquí puedes agregar un mapa similar usando Leaflet o una librería de mapas -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

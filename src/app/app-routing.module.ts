@@ -4,9 +4,10 @@ import { ListarProductosComponent } from './components/listar-productos/listar-p
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { ListarClientesComponent } from './components/listar-clientes/listar-clientes.component';
 import { CrearClienteComponent } from './components/crear-cliente/crear-cliente.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: ListarProductosComponent },
+  { path: '', component: HomeComponent },
   { path: 'clientes', component: ListarClientesComponent },
   { path: 'crear-cliente', component: CrearClienteComponent },
   { path: 'editar-cliente/:id', component: CrearClienteComponent },
