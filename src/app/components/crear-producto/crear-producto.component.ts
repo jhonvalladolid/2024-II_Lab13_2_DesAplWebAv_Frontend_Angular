@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ProductoService } from '../../services/producto.service';
+import { ProductoService } from '../../services/producto/producto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -24,7 +24,7 @@ export class CrearProductoComponent implements OnInit {
       precio: ['', [Validators.required, Validators.min(0)]],
       stock: ['', [Validators.required, Validators.min(0)]],
     });
-    
+
     const idParam = this.route.snapshot.paramMap.get('id');
     this.id = idParam ? +idParam : null; // Convertir id a number si es necesario
   }
