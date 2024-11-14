@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="card col-md-6 offset-md-3">
+      <div class="card-body">
+        <h2 class="text-center">{{ id ? 'Actualizar Cliente' : 'Registrar Cliente' }}</h2>
+
+        <form [formGroup]="clienteForm" (ngSubmit)="saveOrUpdateCliente()">
+          <div class="form-group mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input
+              id="nombre"
+              type="text"
+              placeholder="Nombre del cliente"
+              formControlName="nombre"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="apellidos" class="form-label">Apellidos:</label>
+            <input
+              id="apellidos"
+              type="text"
+              placeholder="Apellidos del cliente"
+              formControlName="apellidos"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Email del cliente"
+              formControlName="email"
+              class="form-control"
+            />
+          </div>
+
+          <div class="botones">
+            <button type="submit" class="btn btn-danger">Guardar</button>
+            <button routerLink="/clientes" class="btn btn-primary ml-3">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

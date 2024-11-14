@@ -1,0 +1,42 @@
+<div class="container">
+  <h2 class="text-center">Listado de Clientes</h2>
+
+  <div class="d-flex justify-content-between mb-3">
+    <a routerLink="/crear-cliente" class="btn btn-primary">
+      <i class="fa fa-plus"></i> Agregar Cliente
+    </a>
+    <div class="input-group" style="width: 300px;">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar cliente por nombre o apellido"
+        [(ngModel)]="searchTerm"
+        (input)="filtrarClientes()"
+      />
+    </div>
+  </div>
+
+  <table class="table table-secondary table-hover mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Email</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of filteredClientes">
+        <td>{{ cliente.id }}</td>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.apellidos }}</td>
+        <td>{{ cliente.email }}</td>
+        <td>
+          <a [routerLink]="['/editar-cliente', cliente.id]" class="btn btn-info">Actualizar</a>
+          <button (click)="eliminarCliente(cliente.id)" class="btn btn-danger ml-2">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

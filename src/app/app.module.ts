@@ -9,6 +9,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ListarClientesComponent } from './components/listar-clientes/listar-clientes.component';
+import { CrearClienteComponent } from './components/crear-cliente/crear-cliente.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './components/footer/footer.component';
     CrearProductoComponent,
     ListarProductosComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ListarClientesComponent,
+    CrearClienteComponent
   ],
   imports: [
     BrowserModule,
