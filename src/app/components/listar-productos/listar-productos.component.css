@@ -1,0 +1,39 @@
+.navbar {
+  background-color: rgb(54, 151, 241);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(54, 151, 241);
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+span {
+  color: white;
+}
+
+.formato01 {
+  color: white;
+}
+
+.botones {
+  padding: 10px;
+  display: inline-flex;
+  column-gap: 10px;
+  margin-right: 10px;
+}
+
+/* Personalizar el margen superior para todo el contenedor */
+.container {
+  margin-top: 80px; /* Equivalente a style={{ marginTop: "80px" }} */
+}
+
+/* Estilo adicional para el botón de eliminar */
+.ml-2 {
+  margin-left: 10px;
+}

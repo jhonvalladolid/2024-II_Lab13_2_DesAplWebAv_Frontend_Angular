@@ -1,0 +1,52 @@
+<div class="container">
+  <h2 class="text-center">Listado de Productos</h2>
+
+  <div class="d-flex justify-content-between mb-3">
+    <a routerLink="/add-producto" class="btn btn-primary">
+      <i class="fa fa-plus"></i> Agregar Producto
+    </a>
+    <div class="input-group" style="width: 300px;">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar producto por nombre"
+        [(ngModel)]="searchTerm"
+        (input)="filtrarProductos()"
+      />
+    </div>
+  </div>
+
+  <table class="table table-secondary table-hover mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Fecha de Creación</th>
+        <th>Última Actualización</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of filteredProductos">
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>{{ producto.precio }}</td>
+        <td>{{ producto.stock }}</td>
+        <td>{{ producto.fechaCreacion | date: 'short' }}</td>
+        <td>{{ producto.ultimaActualizacion | date: 'short' }}</td>
+        <td>
+          <a [routerLink]="['/edit-producto', producto.id]" class="btn btn-info">
+            Actualizar
+          </a>
+          <button (click)="eliminarProducto(producto.id)" class="btn btn-danger ml-2">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

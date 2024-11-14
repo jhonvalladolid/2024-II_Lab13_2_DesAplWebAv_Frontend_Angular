@@ -1,0 +1,18 @@
+.container {
+  margin-bottom: 60px; /* Ajusta este valor según la altura del footer */
+}
+.navbar {
+  background-color: rgb(54, 151, 241);
+}
+
+.formato01 {
+  color: white;
+}
+
+.navbar-nav .nav-link {
+  color: white !important; /* Para sobrescribir estilos predeterminados */
+}
+
+.navbar-brand {
+  color: white !important;
+}
