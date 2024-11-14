@@ -33,8 +33,12 @@
         <td>{{ cliente.apellidos }}</td>
         <td>{{ cliente.email }}</td>
         <td>
-          <a [routerLink]="['/editar-cliente', cliente.id]" class="btn btn-info">Actualizar</a>
-          <button (click)="eliminarCliente(cliente.id)" class="btn btn-danger ml-2">Eliminar</button>
+          <a [routerLink]="['/editar-cliente', cliente.id]" class="btn btn-info">
+            <i class="fas fa-edit"></i> <!-- Icono de actualizar cliente -->
+          </a>
+          <button (click)="eliminarCliente(cliente.id)" class="btn btn-danger ml-2">
+            <i class="fas fa-trash"></i> <!-- Icono de eliminar cliente -->
+          </button>
         </td>
       </tr>
     </tbody>

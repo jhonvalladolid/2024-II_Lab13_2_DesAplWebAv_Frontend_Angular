@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ListarClientesComponent } from './components/listar-clientes/listar-clientes.component';
 import { CrearClienteComponent } from './components/crear-cliente/crear-cliente.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CrearClienteComponent } from './components/crear-cliente/crear-cliente.
     NavbarComponent,
     FooterComponent,
     ListarClientesComponent,
-    CrearClienteComponent
+    CrearClienteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

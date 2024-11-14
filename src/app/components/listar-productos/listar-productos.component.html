@@ -40,10 +40,10 @@
         <td>{{ producto.ultimaActualizacion | date: 'short' }}</td>
         <td>
           <a [routerLink]="['/edit-producto', producto.id]" class="btn btn-info">
-            Actualizar
+            <i class="fas fa-edit"></i> <!-- Icono de edición -->
           </a>
           <button (click)="eliminarProducto(producto.id)" class="btn btn-danger ml-2">
-            Eliminar
+            <i class="fas fa-trash"></i> <!-- Icono de eliminación -->
           </button>
         </td>
       </tr>
